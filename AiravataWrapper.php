@@ -322,7 +322,7 @@ class AiravataWrapper implements AiravataWrapperInterface
           if ($comRescheduling != null && !empty($comRescheduling->resourceHostId)) {
               return select_compute_resource_name($this->airavataconfig, $comRescheduling->resourceHostId);
           } else {
-              return "Resource not yet assigned";
+              return ' Resource not yet assigned ';
           }
         } catch (AiravataSystemException $ase) {
             echo $ase->getMessage();
